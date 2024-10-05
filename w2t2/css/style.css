@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.todo-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+button {
+    padding: 10px;
+    background-color: #1F1F1F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0 0 5px;
+}
+button:hover {
+    background-color: #333;
+}
+#task-list {
+    list-style: none;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.3s;
+    height: 50px;
+    overflow: hidden;
+}
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+#task-list span{
+    width: 90%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+#text-edit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2fceac8a;
+    width: 75%;
+    height: 75%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    display: none;
+}
+#text-edit.active{
+    display:flex;
+}
+#text-edit textarea{
+    width: 75%;
+    height: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+}
+#text-edit .delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 20px;
+}
+#text-edit button{
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
